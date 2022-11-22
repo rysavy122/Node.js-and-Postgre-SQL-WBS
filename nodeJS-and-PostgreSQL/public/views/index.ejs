@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: start;
+            max-width:1000px;
+            background-color: darkcyan;
+        }
+
+        input,button{
+            padding:5px;
+        }
+        button{
+            min-width:100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Connect your NodeJS application to PostgreSQL</h1>
+    <br>
+    <h3>Module 9: NodeJS With A Database</h3>
+    <br>
+    <form method="POST" action="/users">
+        <h4>View All users / Add a new User </h4>
+        <input type="text" name="firstname" placeholder="Name">
+        <input type="text" name="lastname" placeholder="Lastame">
+        <input type="number" name="age" placeholder="Age" >
+
+        <button type="submit">View all Users</button>
+        <button type="submit">Add a new User</button>
+    </form>
+    <form method="GET" action="/users/:id">
+        <h4>View,Edit or Delete a User </h4>
+        <input type="text" name="firstname" placeholder="Name">
+        <input type="text" name="lastname" placeholder="Lastame">
+        <input type="number" name="age" placeholder="Age" >
+
+        <button type="submit">View a User</button>
+        <button type="submit">Edit a User</button>
+        <button type="submit">Delete a User</button>
+    </form>  
+    <br>
+    <form method="POST" action="/orders">
+        <h4>View all Orders / Add a new Order</h4>
+        <input type="text" name="firstname" placeholder="Name">
+        <input type="text" name="lastname" placeholder="Lastame">
+        <input type="number" name="age" placeholder="Age" >
+
+        <button type="submit">View all Orders</button>
+        <button type="submit">Add new Order</button>
+    </form>
+    <form method="GET" action="/orders/:id">
+        <h4>View, Edit or Delete an Order</h4>
+        <input type="text" name="firstname" placeholder="Name">
+        <input type="text" name="lastname" placeholder="Lastame">
+        <input type="number" name="age" placeholder="Age" >
+
+        <button type="submit">View an Order</button>
+        <button type="submit">Delete an Order</button>
+        <button type="submit">Edit an Order</button>
+    </form>
+</body>
+</html>
