@@ -1,14 +1,17 @@
 import { Router } from "express";
-const routerUsers = Route();
+import { viewAllUsers, addUser, viewUser, editUser, deleteUser } from "../controller/controllerUsers.js";
 
+const routerUsers = Router();
 
 routerUsers
     .route('/')
-    .get()
-    .post()
+    .get(viewAllUsers)
+    .post(addUser)
 
 routerUsers
     .route('/:id')
-    .get()
-    .put()
-    .delete()
+    .get(viewUser)
+    .put(editUser)
+    .delete(deleteUser)
+
+    export default routerUsers;

@@ -1,13 +1,17 @@
 import { Router } from "express";
+import { viewAllOrders, addOrder, viewOrder, editOrder, deleteOrder } from "../controller/controllerOrders.js";
+
 const routerOrders = Router();
 
 routerOrders
     .route('/')
-    .get()
-    .post()
+    .get(viewAllOrders)
+    .post(addOrder)
 
 routerOrders
     .route('/:id')
-    .get()
-    .put()
-    .delete()
+    .get(viewOrder)
+    .put(editOrder)
+    .delete(deleteOrder)
+
+    export default routerOrders;
